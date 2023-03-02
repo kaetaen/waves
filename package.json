@@ -1,0 +1,32 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^23.1.0",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "productName": "Waves",
+    "artifactName": "Waves-${version}.${ext}",
+    "appId": "kaetaen.waves",
+    "linux": {
+      "target": "AppImage",
+      "icon": "wave-sound.png"
+    }
+  }
+}
