@@ -4,7 +4,8 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "npx electron-builder -p always --linux deb AppImage rpm"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -14,7 +15,10 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": {
+    "name": "Rubens dos Santos",
+    "email": "rubensdossantos.dev@gmail.com"
+  },
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^23.1.0",
@@ -25,8 +29,25 @@
     "artifactName": "Waves-${version}.${ext}",
     "appId": "kaetaen.waves",
     "linux": {
-      "target": "AppImage",
-      "icon": "wave-sound.png"
+      "category": "Multimidia",
+      "icon": "wave-sound.png",
+      "description": "Stuttering helper",
+      "desktop": {
+        "Name": "Waves",
+        "Comment[de]": "Stuttering Helper"
+      }
+    },
+    "rpm": {
+      "packageCategory": "multimidia",
+      "depends": [
+        "pulseaudio-utils"
+      ]
+    },
+    "deb": {
+      "packageCategory": "multimidia",
+      "depends": [
+        "pulseaudio-utils"
+      ]
     }
   }
 }
